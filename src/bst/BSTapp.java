@@ -1,5 +1,5 @@
 package bst;
-
+//Implementing Node
 class Node {
     Node left;
     Node right;
@@ -20,7 +20,23 @@ class BST {
        }
        return node;
    }
+   //delete method
+   public Node delete (Node node,int val){
+       if (node == null){
+           return null;
+       }
+       if (val < node.data){
+           node.left = delete(node.left,val);
+       }else if(val > node.data){
+           node.right = delete (node.right, val);
+       }else {
+           if (node.left == null || node.right == null){
+               Node temp =  null;
+               temp = node.left == null
+           }
+       }
 
+    }
    public Node createNewNode (int k){
        Node a = new Node ();
        a.data = k;
